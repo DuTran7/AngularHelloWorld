@@ -3,7 +3,16 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase: {
+    apiKey: 'xxx',
+    authDomain: 'hypnotic-runway-186308.firebaseapp.com',
+    databaseURL: 'https://hypnotic-runway-186308-default-rtdb.firebaseio.com/',
+    projectId: 'hypnotic-runway-186308',
+    storageBucket: 'gs://hypnotic-runway-186308.appspot.com',
+    messagingSenderId: 'xxx',
+    appId: '1:xxx:web:xxx',
+  },
 };
 
 /*
