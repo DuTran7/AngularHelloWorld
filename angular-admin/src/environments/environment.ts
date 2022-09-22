@@ -5,13 +5,14 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: 'xxx',
+    apiKey: 'AIzaSyC5O6oESGWX_Pxxaa7dm4N992AQH1SDago',
     authDomain: 'hypnotic-runway-186308.firebaseapp.com',
-    databaseURL: 'https://hypnotic-runway-186308-default-rtdb.firebaseio.com/',
+    databaseURL: 'https://hypnotic-runway-186308-default-rtdb.firebaseio.com',
     projectId: 'hypnotic-runway-186308',
-    storageBucket: 'gs://hypnotic-runway-186308.appspot.com',
-    messagingSenderId: 'xxx',
-    appId: '1:xxx:web:xxx',
+    storageBucket: 'hypnotic-runway-186308.appspot.com',
+    messagingSenderId: '744374075203',
+    appId: '1:744374075203:web:1b08a6b358d0f62058f9f6',
+    measurementId: 'G-M5XNZH0F7C',
   },
 };
 

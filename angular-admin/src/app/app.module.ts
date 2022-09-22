@@ -1,20 +1,12 @@
-// import { NgModule } from '@angular/core';
-// import { BrowserModule } from '@angular/platform-browser';
-
-// import { ButtonModule } from 'primeng/button';
-// import { AppComponent } from './app.component';
-
-// @NgModule({
-//   declarations: [AppComponent],
-//   imports: [BrowserModule, ButtonModule],
-//   providers: [],
-//   exports: [ButtonModule],
-//   bootstrap: [AppComponent],
-// })
-// export class AppModule {}
-
 import { NgModule } from '@angular/core';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { provideFirebaseApp, getApp, initializeApp } from '@angular/fire/app';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireAnalyticsModule } from '@angular/fire/compat/analytics';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+
+import { environment } from '../environments/environment';
+
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppLayoutModule } from './layout/app.layout.module';
@@ -29,7 +21,13 @@ import { PhotoService } from './demo/service/photo.service';
 
 @NgModule({
   declarations: [AppComponent, NotfoundComponent],
-  imports: [AppRoutingModule, AppLayoutModule],
+  imports: [
+    AppRoutingModule,
+    AppLayoutModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAnalyticsModule,
+    AngularFirestoreModule,
+  ],
   providers: [
     { provide: LocationStrategy, useClass: HashLocationStrategy },
     CountryService,
